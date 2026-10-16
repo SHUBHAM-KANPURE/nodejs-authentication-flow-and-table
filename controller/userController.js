@@ -24,7 +24,7 @@ const createUser = async (req, res) => {
         email,
         password: bcrypt.hashSync(password),
       });
-      newUser.save();
+      await newUser.save();
       let FrontendPort = process.env.FRONTEND_PORT;
 
       const file = "./views/email_invitation.ejs";

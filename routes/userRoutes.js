@@ -10,10 +10,13 @@ const {
     createUserZod,
     userLoginZod,
     createUserExpressValidator,
-    userLoginExpressValidator,
+    userLoginExpressValidator
+} = require('../controller/userController');
+
+const {
     signupValidationRules,
     loginValidationRules
-} = require('../controller/userController');
+} = require('../validations/userValidation');
 
 router.post('/signup', createUser);
 router.post('/signin', userLogin);
